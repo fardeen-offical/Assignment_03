@@ -33,20 +33,33 @@
 
 /* Hero */
 .hero {
-  background: #f2f2f2;
+  position: relative;
   text-align: center;
-  padding: 80px 20px;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 20px;
-  color: #555;
 }
 
 .hero button {
@@ -82,11 +95,19 @@
 
 .product-card {
   background: white;
-  padding: 20px;
-  width: 200px;
+  padding: 15px;
+  width: 220px;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .product-card:hover {
@@ -102,7 +123,7 @@ footer {
   margin-top: 30px;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -114,5 +135,8 @@ footer {
   .product-grid {
     flex-direction: column;
     align-items: center;
+  }
+  .hero img {
+    height: 300px;
   }
 }
